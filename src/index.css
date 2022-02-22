@@ -6,9 +6,14 @@ body{
 header{
     display: flex;
     flex-direction: row;
-    height: 100px;
     align-items: center;
     justify-content: space-between;
+}
+@media(max-width:600px){
+    header{
+        display: flex;
+        flex-direction: column;
+    }
 }
 .img{
     height: 50px;
@@ -24,10 +29,22 @@ header{
     align-items: center;
     margin: 10px;
 }
+@media(max-width:600px){
+    .head1{
+        display: flex;
+        flex-direction: column;
+    }
+}
 .head2{
     display: flex;
     align-items: center;
     margin: 10px;
+}
+@media(max-width:600px){
+    .head2{
+        display: flex;
+        flex-direction: column;
+    }
 }
 .head1 a{
     margin: 10px;
@@ -55,6 +72,12 @@ a:hover{
     display: flex;
     width: 100%;
     flex: 1;
+}
+@media(max-width:600px){
+    .image-content{
+        display: flex;
+        flex-direction: column;
+    }
 }
 .img-laptop{
     display: flex;
@@ -86,6 +109,13 @@ a:hover{
     justify-content: center;
     margin: 30px;
 }
+@media(max-width:600px){
+    .icons{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
 .icon{
     display: flex;
     margin: 0px 40px;
@@ -94,6 +124,13 @@ a:hover{
 .img-content-link{
     display: flex;
     flex-direction: row;
+}
+@media (max-width:600px){
+    .img-content-link{
+         display:flex;
+         flex-direction:column;
+         align-items: center;
+    }
 }
 .a{
     color: #009ADD;
