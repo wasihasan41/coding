@@ -14,7 +14,7 @@ console.log(number1 + number2);
 var num1 = 25;
 var num2 = 48.60;
 // strings
-var str1 = "this is a strign";
+var str1 = 'this is a strign';
 var str2 = "this is also a string";
 // objects
 var marks = {
