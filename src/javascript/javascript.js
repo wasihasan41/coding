@@ -1,16 +1,16 @@
-// # API
+//  ___API___
 console.log("This is text");
 console.warn("This is warning");
 console.error("this is error");
 
-// # js variables
+// ___js variables___
 // variable = container to store data values.
 var number1 = 28;
 var number2 = 22;
 console.log(number1 + number2);
 
-// # js data 
-// numebrs
+//  ___js data___ 
+// numebrs            //numbers show in blue and string show in black in chrome while in console mode
 var num1 = 25;
 var num2 = 48.60;
 // strings
@@ -24,7 +24,7 @@ var marks = {
 }
 console.log(marks);
 
-// # booleans
+//  ___booleans___
 // var true false
 var a = true;
 var b = false;
@@ -36,7 +36,7 @@ console.log(und);
 var n = null;
 console.log(n);
 
-// # arrays
+// ___arrays___
 var arr = [1, 2, 3, 4, 5]
 console.log(arr)
 // if you want to show a specific numeber like 2 then:
@@ -51,5 +51,167 @@ console.log(arr[1])
 2. reference data type: arrays and objects
 */
 
+// ___operators in javascript___
+// Arithimetic operators
+var a = 100;
+var b = 10;
+console.log("The value of a + b is", a + b);    //operators = 'a, b' ; operands = '+'
+console.log("The value of a - b is", a - b);
+console.log("The value of a / b is", a / b);
+console.log("The value of a * b is", a * b);
+
+// assignment operators
+var c = b;
+console.log(c);
+
+var c = b;
+c+=2; //c = c + 2
+// c-=2;
+// c/=2;
+// c*=2;
+console.log(c);
+
+// comparison operator
+var x = 34;       
+var y = 56;
+console.log(x == y);
+console.log(x <= y);
+console.log(x >= y);
+console.log(x > y);
+console.log(x < y);
+console.log(x != y);
+
+// logical operators
+//logical and
+console.log( true && true);      // it will not show true until true && true
+console.log( true && false);      
+console.log( false && true);     
+console.log( false && false);    
+//logical or
+console.log( true || true);     //it will not show false  until false || false
+console.log( true || false);
+console.log( false || true);
+console.log( false || false);
+//logical not
+console.log(!true);             //it will show false to true and true to false
+console.log(!false);
+
+// ___function___
+function avg(a, b){
+c = (a + b)/2;
+return  c;
+}
+c1 = avg(4, 6);
+c2 = avg(29, 51);
+console.log(c1, c2);
+
+// ___condtionals in javascript___
+var age = 34;
+if (age > 50 ){
+    console.log(" you can not drive");
+}
+else if(age < 18 ){
+    console.log("you can not drive");
+}
+else{
+    console.log("you can drive")
+}
+
+//___loops___
+//for loop
+var arr = [1,2,3,4,5,6,7];
+console.log(arr);
+for ( i=0 ; i < arr.length; i++) {
+    console.log(arr[i]);
+    
+}
+//for each loop
+var arr = [1,2,3,4,5,6,7];
+arr.forEach(function(elements) {
+    console.log(elements);
+})
+//while loop
+var arr = [1,2,3,4,5,6,7];
+let j = 0;
+while (j < arr.length) {
+    console.log(arr[j]);
+    j++;
+}
+//do while loop
+var arr = [1,2,3,4,5,6,7];
+let p = 0;
+do {
+    console.log(arr[p]);
+    p++;
+} while (p < arr.length);
+
+// ___break and continue statement___
+//break
+let w = 0;
+var arr = [1, 2, 3, 4, 5, 6, 7];
+for (let w = 0; w < arr.length; w++) {
+    if(w==2){
+        break;                       //it breaks the loop if the given condition is true
+    }
+    console.log(arr[w]);
+}
+
+//continue
+let r = 0;
+var arr = [1, 2, 3, 4, 5, 6, 7];
+for (let r = 0; r < arr.length; r++) {
+    if(r==2){
+        continue;                       //it cancels the loop of the given condition
+    }
+    console.log(arr[r]);
+}
+
+// ___array method___
+let myArr = ["fan", "camera", 34, "toyota", null, true]; 
+
+console.log(myArr.length);                     //it will tell the length of the array
+
+// myArr.pop();                                //it will remove last element from the array
+// console.log(myArr);
+
+// myArr.shift();                              //it will remove first element from the array
+// console.log(myArr);
+
+// myArr.push("adil");                         //for pushing an element into an array    
+// console.log(myArr);
+
+// myArr.unshift("adil");                      //it will add new element at the start of an array and tell its length   
+// console.log(myArr);
+
+//myArr.sort();                                //it will make everthing sorted i.e. (aplhabetically) 
+//console.log(myArr);
+
+// ___string methods in javascript___
+let string = "hey what is the meaning of what";              
+console.log(string.length);                      //it will tell the length of string
+
+//console.log(string.indexOf("what"))            //it will tell the position of the letter 
+
+//console.log(string.lastIndexOf("what"));       //it will tell the position of the same last letter
+
+//console.log(string.slice(4, 8));               //it will show string given by the number (4=1st string, 8=last string)
+
+//console.log(string.replace("hey", "listen"))   //it will replace one letter with other (hey=from which, listen=to change)
+
+//___dates in javaascript___
+let date = new Date()                            //for getting all time info
+console.log(date);
+
+console.log(date.getTime())                       //tells time in seconds
+
+console.log(date.getFullYear())                   //tells year
+
+console.log(date.getMinutes())                    //tells minutes
+
+console.log(date.getHours())                      //tells hour
+
+console.log(date.getDate())                       //tells date
+
+console.log(date.getDay())                       //tells day in array form
 
 
