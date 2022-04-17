@@ -214,4 +214,50 @@ console.log(date.getDate())                       //tells date
 
 console.log(date.getDay())                       //tells day in array form
 
+// ___DOM manipulation___
 
+document.getElementById("click").style.background="yellow";
+
+let elem = document.getElementById("click");
+console.log(elem);
+
+let elemClass = document.getElementsByClassName("container");
+console.log(elemClass);
+
+// elemClass[0].style.background="red";
+
+elemClass[0].classList.add("bg-primary");
+elemClass[1].classList.add("text-success");
+elemClass[0].classList.remove("bg-primary");
+
+console.log(elemClass[0].innerHTML);
+console.log(elemClass[0].innerText);
+
+tm = document.getElementsByTagName("p");
+console.log(tm);
+
+createdElement = document.createElement("p");
+createdElement.innerText = "its adil";
+tm[0].appendChild(createdElement);
+
+createdElement2 = document.createElement("b");
+createdElement2.innerText = " sorry wasi here";
+tm[0].replaceChild(createdElement2, createdElement);
+
+// ___Selecting using queries___
+sel = document.querySelector(".container");
+console.log(sel);
+sel = document.querySelectorAll(".container");
+console.log(sel);
+
+// ___Events in javascript___
+function clicked() {
+    console.log("The button was clicked");
+}
+window.onload = function(){
+    console.log("The doc was loaded");
+}
+
+Container.addEventListener("click", function(){
+    console.log("click hua");
+})
