@@ -258,6 +258,46 @@ window.onload = function(){
     console.log("The doc was loaded");
 }
 
-Container.addEventListener("click", function(){
-    console.log("click hua");
+click.addEventListener('click', function(){
+    document.querySelectorAll('.container')[0].innerHTML= "<b> you have clicked </b>";
+    console.log("clicked on cantainer");
 })
+
+// click.addEventListener('mouseover', function(){
+//     console.log("hover on cantainer");
+// })
+
+// click.addEventListener('mouseout', function(){
+//     console.log("hover-out of cantainer");
+// })
+
+// click.addEventListener('mouseup', function(){
+//     console.log("mouse up from cantainer");
+// })
+
+// click.addEventListener('mouseout', function(){
+//     console.log("hold-on on cantainer");
+// })
+
+
+// ___arrow functions___
+function sum(a, b){
+    return a+b;
+}
+sum = (a, b)=>{
+    return a+b;
+}
+
+// ___SetTimeout and SetIntervals___
+logkro = ()=>{
+    console.log("i m wasi")
+}
+// setTimeout(logkro, 4000);
+//setInterval(logkro, 4000);  //use clr for cancelling it
+
+// ___local storage___
+localStorage.setItem('namee', 'harry');
+
+// ___Template literals - backticks___
+a = 34;
+console.log(`this is my ${a}`);
