@@ -1,0 +1,11 @@
+.image1{
+    height: 100px;
+    position: relative;
+    top: 400px;
+
+}
+.image2{
+    position: absolute;
+    height: 500px;
+    width: 700px;
+}

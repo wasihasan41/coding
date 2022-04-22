@@ -55,10 +55,11 @@ console.log(arr[1])
 // Arithimetic operators
 var a = 100;
 var b = 10;
-console.log("The value of a + b is", a + b);    //operators = 'a, b' ; operands = '+'
-console.log("The value of a - b is", a - b);
-console.log("The value of a / b is", a / b);
-console.log("The value of a * b is", a * b);
+console.log("a = 100, b = 10");
+console.log("The value of 100 + 10 is :", a + b);    //operators = 'a, b' ; operands = '+'
+console.log("The value of 100 - 10 is :", a - b);
+console.log("The value of 100 / 10 is :", a / b);
+console.log("The value of 100 * 10 is :", a * b);
 
 // assignment operators
 var c = b;
@@ -98,8 +99,7 @@ console.log(!false);
 
 // ___function___
 function avg(a, b){
-c = (a + b)/2;
-return  c;
+    return  (a + b)/2;
 }
 c1 = avg(4, 6);
 c2 = avg(29, 51);
@@ -190,16 +190,16 @@ console.log(myArr.length);                     //it will tell the length of the 
 let string = "hey what is the meaning of what";              
 console.log(string.length);                      //it will tell the length of string
 
-//console.log(string.indexOf("what"))            //it will tell the position of the letter 
+// console.log(string.indexOf("what"))            //it will tell the position of the letter 
 
-//console.log(string.lastIndexOf("what"));       //it will tell the position of the same last letter
+// console.log(string.lastIndexOf("what"));       //it will tell the position of the same last letter
 
-//console.log(string.slice(4, 8));               //it will show string given by the number (4=1st string, 8=last string)
+// console.log(string.slice(4, 8));               //it will show string given by the number (4=1st string, 8=last string)
 
-//console.log(string.replace("hey", "listen"))   //it will replace one letter with other (hey=from which, listen=to change)
+// console.log(string.replace("hey", "listen"))   //it will replace one letter with other (hey=from which, listen=to change)
 
 //___dates in javaascript___
-let date = new Date()                            //for getting all time info
+let date = new Date                            //for getting all time info
 console.log(date);
 
 console.log(date.getTime())                       //tells time in seconds
@@ -258,10 +258,10 @@ window.onload = function(){
     console.log("The doc was loaded");
 }
 
-click.addEventListener('click', function(){
-    document.querySelectorAll('.container')[0].innerHTML= "<b> you have clicked </b>";
-    console.log("clicked on cantainer");
-})
+// click.addEventListener('click', function(){
+//     document.querySelectorAll('.container')[0].innerHTML= "<b> you have clicked </b>";
+//     console.log("clicked on cantainer");
+// })
 
 // click.addEventListener('mouseover', function(){
 //     console.log("hover on cantainer");
@@ -293,7 +293,7 @@ logkro = ()=>{
     console.log("i m wasi")
 }
 // setTimeout(logkro, 4000);
-//setInterval(logkro, 4000);  //use clr for cancelling it
+// setInterval(logkro, 4000);  //use clr for cancelling it
 
 // ___local storage___
 localStorage.setItem('namee', 'harry');
