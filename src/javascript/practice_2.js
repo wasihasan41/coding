@@ -178,9 +178,33 @@ console.log(game[1])
 game[2] = "clasmini";  //for replacing an array element
 console.log(game)
 console.log(game.length)  //length tells the length of an array,its always one more then the highest array index
-console.log(game.sort())   //sort will arrange the array in alphabetically order
-console.log(game.push("clashquest"));
-console.log(game)   //push will add new element to array
 console.log(game[7]="piano tiles");
 console.log(game[6])   //adding element with high indexes can lead to undefined holes in an array !
 //difference between arrays and object is that it use numbered indexes and name indexes respectively 
+console.log(game.toString());  //to change array into strings
+console.log(game.join(" * "));  //same as toString but in addition you can specify the editor
+console.log(game)
+console.log(game.pop())
+console.log(game)   //pop will remove the last element of an array
+console.log(game.push("clashquest"));
+console.log(game)   //push will add new element to array at last
+console.log(game.shift())
+console.log(game)    //shift will remove the first element of an array
+console.log(game.unshift("temple run"))
+console.log(game)    //unshift will ad  new elemnt to array  at starting
+console.log(game[0]="godilla")
+console.log(game)  //for changing the elements of an array
+console.log(delete game[7])
+console.log(game)   //for deleting an element from an array
+
+const food = ["burger", "pizza"];
+console.log(game.concat(food));  //for merging(concatenating) existing arraya it doesn't change the existing array it creates the new array
+console.log(game.concat("forntine"))  //for merging an array with values
+console.log(game);
+console.log(game.splice(0, 1, "hey"))   //add new items in an array with deleted items, first parameter defines the position where new element should be added and second parameter defines how much element should be removed
+console.log(game);
+console.log(game.slice(0, 3));  //slices out the element from an array first parameter defines delete before elements and second parameter define delete the after elements and rest between elemnts displayed
+console.log(game);
+
+console.log(game.sort())   //sort will arrange the array in alphabetically order
+console.log(game.reverse())  // it will reveres the element in an array
