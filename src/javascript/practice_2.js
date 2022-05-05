@@ -208,3 +208,45 @@ console.log(game);
 
 console.log(game.sort())   //sort will arrange the array in alphabetically order
 console.log(game.reverse())  // it will reveres the element in an array
+
+console.log(new Date());   //for create new date object
+console.log(new Date(2022, 4, 5, 12, 19, 40, 70));   //year, month(from 0 - 11 i.e. 0 is jan and 11 is feb), day, hour, ,minute, second, millisecond
+console.log(new Date().toString());  //to convert object into string
+console.log(new Date().toDateString());  //for making it comfortable to read
+console.log(new Date().getTime());  //return number of millisecond since jan 1 , 1970
+console.log(new Date().getFullYear());  //return year
+console.log(new Date().getMonth());  //return month
+console.log(new Date().getDate());  //return date
+console.log(new Date().getHours()); //return hour
+console.log(new Date().getMinutes()); //return minutes
+console.log(new Date().getSeconds());  //return second
+console.log(new Date().getMilliseconds()); //return millisecond
+console.log(new Date().getDay()); //return day (0 - 6, 0 = sun ... 6 = saturday)
+//UTC date methds (universal time zone dates)
+
+console.log(Math.PI)  //returns PI value
+console.log(Math.E)  //returns Eulers numebr
+console.log(Math.SQRT2)  //returns sqr root of 2
+console.log(Math.SQRT1_2)  //return sqr root of 1/2
+console.log(Math.LN2)  //natural logarithm of 2
+console.log(Math.LN10)  //natural logarithm of 10
+console.log(Math.LOG2E)  //base 2 logarithm of 2
+console.log(Math.LOG10E)  // base 10 lograithm of 10
+console.log(Math.round(3.8))  //nearest integer
+console.log(Math.ceil(2.4))  //nearest upto nearest integer
+console.log(Math.floor(2.7))  //nearest down nearest ineteger
+console.log(Math.trunc(7.1))  //integer part only
+console.log(Math.sign(8)) //retuns 1 if pos, -1 if neg, 0 if zero
+console.log(Math.pow(2,6))  //returns power 1st perimeter is base and 2nd perometer is base (not sure about parameter :( )
+console.log(Math.sqrt(6))  //returns square root
+console.log(Math.abs(-54))  //returns positive value of x
+console.log(Math.sin(2.5))  //return sine of x //same cos
+console.log(Math.max(7, 5, 10))  //returns highest value in set of numebrs
+console.log(Math.min(7, 5, 10))  //returns lowest value in set of numebrs
+console.log(Math.random()) //return a randome number between 0 and 1
+console.log(Math.log(5))  //return naturl logarithm of x  //how many times we must multply Mth.E to get x 
+console.log(Math.log2(16))  //return base2 logarithm of x //how mant times we must multiply 2 to get 6
+console.log(Math.log10(100))   //return base10 logarithm of x  //how many times we must multiply 10 to get 100
+
+//math.random use dwith math.floor can be used to get random integers
+console.log(Math.floor(Math.random() * 100))  //returns random number between 0 to 99
