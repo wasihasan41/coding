@@ -250,3 +250,79 @@ console.log(Math.log10(100))   //return base10 logarithm of x  //how many times 
 
 //math.random use dwith math.floor can be used to get random integers
 console.log(Math.floor(Math.random() * 100))  //returns random number between 0 to 99
+
+console.log(10 > 7)  //booleans dATA type that have only two value 
+
+var x = 5;
+console.log(x==4) //comparison operators
+console.log(x=="5")  //equal to
+console.log(x>7)  //greater than
+console.log(x<10)  //smaller than
+console.log(x<=5)  //smaller than or equal to
+console.log(x>=10)  //greater than or equal to
+console.log(x!=8)  //npt equal to
+
+console.log(x<6 && x==5)  //logical operator  //and operator
+console.log(x!=5 || x==5)  //or operator
+console.log(!x==5)  //not equal to
+
+var x = 6
+ x = (x==5) ? "yup":"nope"  //terminary operator //variablename = (condition) ? value1 : value2
+console.log(x)
+
+var x = 5;
+if(x==6){
+    console.log("yes")
+}else if(x!=6){
+    console.log("yup")
+}else{
+    console.log("no")
+}
+
+switch (x=6) {
+    case 4:
+        console.log("no")
+        break;
+    case 6:
+        console.log("yes")
+        break;
+    default:
+        console.log("invalid")
+        break;
+}
+
+var x = ["barb", "arch","gob","giant","wiz","hog"];
+for (let i = 0; i < x.length; i++) {
+    console.log(x[i])
+}
+
+var x = ["barb", "arch","gob","giant","wiz","hog"];
+var i = 0;
+while (i < x.length) {
+    console.log(x[i])
+    i++;
+}
+
+var x = ["barb", "arch","gob","giant","wiz","hog"];
+var i = 0;
+do {
+    console.log(x[i]);
+    i++
+} while (i < x.length);
+
+var x = 10;
+for ( i = 1; i <= x; i++) {
+    console.log(i);
+    if (i==5) {
+        // break;
+        continue;
+    }
+}
+
+function myFunction(a, b){
+    return a * b;
+}
+console.log( myFunction(5, 5)) //function
+
+myFunction = (a, b) => a * b;
+console.log( myFunction(5, 5))  //arrow function
