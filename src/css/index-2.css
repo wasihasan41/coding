@@ -3,6 +3,7 @@ h1{
     background-color: greenyellow;  
     display: flex;
     justify-content: center;
+    margin: 0;
 }
 h3{
     color: yellow;
@@ -16,9 +17,25 @@ div{
     flex-direction: column;   
 }
 
-button{
+#increment-btn{
     padding: 10px 0 10px 0;
     margin: 0 200px 0 200px;
     background-color: firebrick;
     color: yellow;
+}
+
+#save-btn{
+    padding: 10px 0 10px 0;
+    margin: 0 200px 0 200px;
+    background-color: green;
+    color: yellow;
+}
+
+#save-el{
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    color: orange;
+    background-color: grey;
+    padding: 10px;
 }
