@@ -39,3 +39,60 @@ div{
     background-color: grey;
     padding: 10px;
 }
+
+#line{
+    border-bottom: 2px solid black;
+}
+
+#shoes{
+    font-weight: bolder;
+    color: red;
+}
+
+#shoes-btn{
+    padding: 10px 0 10px 0;
+    margin: 0 200px 0 200px;
+    border-radius: 20px;
+}
+
+#shoe{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#error{
+    color: red;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+#add, #multiply, #subtract, #divide{
+    padding: 10px 10px;
+    margin: 0 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+#num{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    line-height: 1;
+}
+
+#num1, #num2{
+    font-size: 30px;
+}
+
+#sum{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    line-height: 4;
+    text-decoration: underline;
+    font-weight: 500;
+    font-size: 30px;
+}
