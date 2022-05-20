@@ -102,3 +102,36 @@ function divide(){
     result = num1 / num2
     document.getElementById("sum").innerHTML = "sum: " + result
 }
+
+let age = 16
+if (age < 21) {
+    console.log("you can not enter the club!")
+} else if (age >= 21){
+    console.log("welcome")
+}
+
+let firstCard = 16
+let secondCard = 4
+let sumOfCards = firstCard + secondCard
+console.log(sumOfCards)
+function startGame(){
+let output  
+if (sumOfCards < 21) {
+    output = "Do you want to draw a new card ?"
+} else if(sumOfCards == 21){
+    output = "wohoo! you've got a blackjack"
+}else if(sumOfCards > 21){
+    output = "you're out of the game"
+}
+document.getElementById("message-el").innerHTML = output
+document.getElementById("sum-el").innerHTML = "Sum : " + sumOfCards
+document.getElementById("card-el").innerHTML = "Cards : " + firstCard + " , " + secondCard
+}
+function NewCard(){
+    console.log("Drawing a new card from the deck!")
+    let Card = 6
+    sumOfCards += Card
+    startGame()
+    document.getElementById("card-el").innerHTML = "Cards : " + firstCard + " , " + secondCard + " , " + Card
+     
+}
