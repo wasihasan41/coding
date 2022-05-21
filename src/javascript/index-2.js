@@ -110,28 +110,76 @@ if (age < 21) {
     console.log("welcome")
 }
 
-let firstCard = 16
-let secondCard = 4
+let firstCard = getRandomCard()
+let secondCard = getRandomCard()
+let allCards = [firstCard, secondCard]
 let sumOfCards = firstCard + secondCard
-console.log(sumOfCards)
+function getRandomCard(){
+    return 5
+}
 function startGame(){
-let output  
-if (sumOfCards < 21) {
-    output = "Do you want to draw a new card ?"
-} else if(sumOfCards == 21){
-    output = "wohoo! you've got a blackjack"
+    renderGame()
+}
+function renderGame(){
+    let output  
+    if (sumOfCards < 21) {
+        output = "Do you want to draw a new card ?"
+    } else if(sumOfCards == 21){
+        output = "wohoo! you've got a blackjack"
 }else if(sumOfCards > 21){
     output = "you're out of the game"
 }
 document.getElementById("message-el").innerHTML = output
 document.getElementById("sum-el").innerHTML = "Sum : " + sumOfCards
-document.getElementById("card-el").innerHTML = "Cards : " + firstCard + " , " + secondCard
+document.getElementById("card-el").innerHTML = "Cards : "
+for (let i = 0; i < allCards.length; i++) {
+    document.getElementById("card-el").innerHTML += allCards[i] + " " 
+}
 }
 function NewCard(){
-    console.log("Drawing a new card from the deck!")
-    let Card = 6
+    let Card = getRandomCard()
     sumOfCards += Card
-    startGame()
-    document.getElementById("card-el").innerHTML = "Cards : " + firstCard + " , " + secondCard + " , " + Card
-     
+    allCards.push(Card)
+    renderGame()
 }
+// extra
+let featurePosts = ["check out my Netflix clone", "Here's the code for my project", "I've just relaunch my portfolio"]
+console.log(featurePosts[0])
+
+let Cards = [7, 4]
+Cards.push(6)
+console.log(Cards)
+
+for (let i = 10; i < 101; i+=10) {
+    console.log(i)
+}
+
+let messages = ["hey", "hello", "hi"]
+let newMessage = "whatsup"
+messages.push(newMessage)
+console.log(messages)
+for (let i = 0; i < 4; i+=1) {
+    console.log(messages[i])
+}
+let index = [7, 3, 9]
+for (let i = 0; i < index.length; i++) {
+    console.log(index[i])
+}
+
+let p1 = 102
+let p2 = 107
+
+function highScore(){
+    if (p1 > p2) {
+        return p1
+    }else if(p1 < p2){
+        return p2
+    }else{
+        return p1
+    }
+}
+console.log(highScore())
+function totalScore(){
+    return p1 + p2
+}
+console.log(totalScore())
