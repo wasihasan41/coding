@@ -110,14 +110,31 @@ if (age < 21) {
     console.log("welcome")
 }
 
-let firstCard = getRandomCard()
-let secondCard = getRandomCard()
-let allCards = [firstCard, secondCard]
-let sumOfCards = firstCard + secondCard
+let allCards = []
+let sumOfCards = 0
+let isAlive = false
+let hasBlackjack = false
+let player = {
+    name: "adil",
+    chips: 145
+} 
+document.getElementById("player-el").innerHTML = player.name + ": $" + player.chips 
 function getRandomCard(){
-    return 5
+    let randomNumber = Math.floor(Math.random() * 13) + 1
+    if (randomNumber == 1) {
+        return 11
+    }else if(randomNumber > 10){
+        return 10
+    }
+    return randomNumber
 }
+
 function startGame(){
+    isAlive = true
+    let firstCard = getRandomCard()
+    let secondCard = getRandomCard()
+    allCards = [firstCard, secondCard]
+    sumOfCards = firstCard + secondCard 
     renderGame()
 }
 function renderGame(){
@@ -126,8 +143,10 @@ function renderGame(){
         output = "Do you want to draw a new card ?"
     } else if(sumOfCards == 21){
         output = "wohoo! you've got a blackjack"
+        hasBlackjack = true
 }else if(sumOfCards > 21){
     output = "you're out of the game"
+    isAlive = false
 }
 document.getElementById("message-el").innerHTML = output
 document.getElementById("sum-el").innerHTML = "Sum : " + sumOfCards
@@ -137,10 +156,12 @@ for (let i = 0; i < allCards.length; i++) {
 }
 }
 function NewCard(){
+    if(isAlive == true && hasBlackjack == false){
     let Card = getRandomCard()
     sumOfCards += Card
     allCards.push(Card)
     renderGame()
+  }
 }
 // extra
 let featurePosts = ["check out my Netflix clone", "Here's the code for my project", "I've just relaunch my portfolio"]
@@ -166,8 +187,8 @@ for (let i = 0; i < index.length; i++) {
     console.log(index[i])
 }
 
-let p1 = 102
-let p2 = 107
+let p1 = 102;
+let p2 = 107;
 
 function highScore(){
     if (p1 > p2) {
@@ -183,3 +204,9 @@ function totalScore(){
     return p1 + p2
 }
 console.log(totalScore())
+
+function Dice(){
+let randomDiceNumber = Math.floor(Math.random() * 6) + 1
+return randomDiceNumber
+}
+console.log(Dice())
