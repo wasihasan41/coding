@@ -210,3 +210,46 @@ let randomDiceNumber = Math.floor(Math.random() * 6) + 1
 return randomDiceNumber
 }
 console.log(Dice())
+
+var largeCountries = ["China","India","U.S.","Indonesia","Pakistan"]
+for (let i = 0; i < largeCountries.length; i++) {   
+    console.log(largeCountries[i])
+}
+
+var bigCountries = ["Tuvalu","India","U.S.","Indonesia","Monaco"]
+bigCountries.pop()
+bigCountries.push("Pakistan")
+bigCountries.shift()
+bigCountries.unshift("China")
+console.log(bigCountries)
+
+let hands = ["rock","paper","scissors"]
+function gethand(){
+    let randomhand = Math.floor(Math.random()*3)
+    return hands[randomhand]
+}
+console.log(gethand())
+
+function input(){
+console.log("button clicked")
+}
+let myLead= ["www.awesomelead.com", "www.epiclead.com", "www.greatland.com"]
+let inputEl = document.getElementById("input-el")
+let inputBtn = document.getElementById("input-btn")
+inputBtn.addEventListener("click", function(){
+myLead.push(inputEl.value)
+console.log(myLead)
+})
+const ulEl = document.getElementById("ul-el")
+for (let i = 0; i < myLead.length; i++) {
+console.log(myLead[i])
+ulEl.innerHTML+= "<li>" + myLead[i] + "</li>"
+}
+
+// extra
+let inputDiv = document.getElementById("input-div")
+inputDiv.innerHTML+="<button onclick='buy()'>" + "buy" + "</button>"
+function buy(){
+    inputDiv.innerHTML+="<pre>" + "thanks for buying! " + "</pre>"
+}
+
