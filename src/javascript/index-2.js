@@ -230,26 +230,46 @@ function gethand(){
 }
 console.log(gethand())
 
-function input(){
-console.log("button clicked")
-}
-let myLead= ["www.awesomelead.com", "www.epiclead.com", "www.greatland.com"]
-let inputEl = document.getElementById("input-el")
-let inputBtn = document.getElementById("input-btn")
-inputBtn.addEventListener("click", function(){
-myLead.push(inputEl.value)
-console.log(myLead)
-})
+let myLead= []
+const inputEl = document.getElementById("input-el")
+const inputBtn = document.getElementById("input-btn")
 const ulEl = document.getElementById("ul-el")
-for (let i = 0; i < myLead.length; i++) {
-console.log(myLead[i])
-ulEl.innerHTML+= "<li>" + myLead[i] + "</li>"
+
+localStorage.clear()
+console.log(JSON.parse(localStorage.getItem("myLead")))
+
+function input(){
+    myLead.push(inputEl.value)
+    inputEl.value = ""
+    localStorage.setItem("myLead", JSON.stringify(myLead))
+    renderLead()
+    console.log(localStorage.getItem("myLead"))
+}
+function renderLead(){
+    let listItems = ""
+    for (let i = 0; i < myLead.length; i++) {
+        // listItems += "<li><a target='_blank' href='"+myLead[i]+"'>" + myLead[i] + "</a></li>"
+        listItems += `
+            <li>
+                <a target='_blank' href='${myLead[i]}'>
+                    ${myLead[i]}
+                </a>
+            </li>
+        `
+    }
+    ulEl.innerHTML = listItems
 }
 
 // extra
-let inputDiv = document.getElementById("input-div")
-inputDiv.innerHTML+="<button onclick='buy()'>" + "buy" + "</button>"
-function buy(){
-    inputDiv.innerHTML+="<pre>" + "thanks for buying! " + "</pre>"
-}
+// let inputDiv = document.getElementById("input-div")
+// inputDiv.innerHTML+="<button onclick='buy()'>" + "buy" + "</button>"
+// function buy(){
+//     inputDiv.innerHTML+="<pre>" + "thanks for buying! " + "</pre>"
+// }
 
+// const recipient = "adil"
+// const mail = `hey ${recipient} ! how are you?`
+// console.log(mail)
+
+// myLead = JSON.parse(myLead) //turn string into array
+// myLead = JSON.stringify(myLead) //turn array into string

@@ -138,6 +138,7 @@ div{
     padding: 10px;
     margin: 0;
     display: flex;
+    min-width: 400px;
 }
 #input-el{
     height: 30px;
@@ -151,4 +152,15 @@ div{
     border: 1px solid greenyellow;
     color: white;
     background-color: greenyellow;
+}
+ul{
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 10px;
+}
+li{
+    margin-top: 5px;
+}
+li a{
+    color: greenyellow;
 }
