@@ -145,7 +145,30 @@ div{
     margin-bottom: 2px;
     border-color: greenyellow;
 }
+#button{
+    display: flex;
+    flex-direction: row;
+    display: flex;
+    justify-content: space-around;
+}
 #input-btn{
+    width: 100px;
+    margin: 2px;
+    height: 40px;
+    border: 1px solid greenyellow;
+    color: white;
+    background-color: greenyellow;
+}
+#tab-btn{
+    width: 100px;
+    margin: 2px;
+    height: 40px;
+    border: 1px solid greenyellow;
+    color: greenyellow;
+    background-color: white;
+    font-weight: 700;
+}
+#del-btn{
     width: 100px;
     margin: 2px;
     height: 40px;

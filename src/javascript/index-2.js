@@ -231,33 +231,52 @@ function gethand(){
 console.log(gethand())
 
 let myLead= []
+let oldLead=[]
 const inputEl = document.getElementById("input-el")
 const inputBtn = document.getElementById("input-btn")
 const ulEl = document.getElementById("ul-el")
+const delBtn = document.getElementById("del-btn")
+let leadsFromLocalStorage = JSON.parse(localStorage.getItem("myLead"))
+const tabBtn = document.getElementById("tab-btn")
 
-localStorage.clear()
-console.log(JSON.parse(localStorage.getItem("myLead")))
-
-function input(){
-    myLead.push(inputEl.value)
-    inputEl.value = ""
-    localStorage.setItem("myLead", JSON.stringify(myLead))
-    renderLead()
-    console.log(localStorage.getItem("myLead"))
+if(leadsFromLocalStorage){
+    myLead = leadsFromLocalStorage
+    render(myLead)
 }
-function renderLead(){
+function tab(){
+    chrome.tabs.query({active: true, currentWindow: true},function(tabs){
+        myLead.push(tabs[0].url)
+    localStorage.setItem("myLead", JSON.stringify(myLead))
+    render(myLead)
+    }) 
+}
+
+function render(leads){
     let listItems = ""
-    for (let i = 0; i < myLead.length; i++) {
+    for (let i = 0; i < leads.length; i++) {
         // listItems += "<li><a target='_blank' href='"+myLead[i]+"'>" + myLead[i] + "</a></li>"
         listItems += `
             <li>
-                <a target='_blank' href='${myLead[i]}'>
-                    ${myLead[i]}
+                <a target='_blank' href='${leads[i]}'>
+                    ${leads[i]}
                 </a>
             </li>
         `
     }
     ulEl.innerHTML = listItems
+}
+function deletee(){
+    console.log("double clicked")
+    localStorage.clear()
+    myLead = []
+    render(myLead)
+}
+function input(){
+    myLead.push(inputEl.value)
+    inputEl.value = ""
+    localStorage.setItem("myLead", JSON.stringify(myLead))
+    render(myLead)
+    console.log(localStorage.getItem("myLead"))
 }
 
 // extra
