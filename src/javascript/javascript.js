@@ -92,7 +92,7 @@ console.log( false && false);
 console.log( true || true);     //it will not show false  until false || false
 console.log( true || false);
 console.log( false || true);
-console.log( false || false);
+console.log( 5< 6 || 6<7 || 7<8 || false || true);
 //logical not
 console.log(!true);             //it will show false to true and true to false
 console.log(!false);
@@ -101,6 +101,12 @@ console.log(!false);
 function avg(a, b){
     return  (a + b)/2;
 }
+// void
+function avg(a, b){
+    console.log ((a + b)/2);
+}
+
+avg(10, 20);
 c1 = avg(4, 6);
 c2 = avg(29, 51);
 console.log(c1, c2);
@@ -157,7 +163,6 @@ for (let w = 0; w < arr.length; w++) {
 }
 
 //continue
-let r = 0;
 var arr = [1, 2, 3, 4, 5, 6, 7];
 for (let r = 0; r < arr.length; r++) {
     if(r==2){
@@ -284,7 +289,7 @@ window.onload = function(){
 function sum(a, b){
     return a+b;
 }
-sum = (a, b)=>{
+const sum = (a, b)=>{
     return a+b;
 }
 
