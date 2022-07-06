@@ -9,14 +9,13 @@ btn.addEventListener("click", function(){
 const ludo = document.getElementById("ludo")
 const col = document.createElement("col");
 const row = document.createElement("row")
-const n = 4
+const number = [[1,2,3,4],[5,6,7,8],[9,10,11,12],[13,14,15,16]]
 let table = ""
-for (let col = 1; col <= n ; col++) {
-    table += `<div class="col">`
-    for (let row = 1; row <= n; row++) {
-        table += `<div class="row">${col}</div>`
+for (let row = 0; row < 4 ; row++) {
+    table += `<div class="row">`
+    for (let col = 0; col < 4; col++) {
+        table += `<div class="col" data-number=${dataNumber=1}>${number[row][col]}</div>`
     }
     table += `</div>`
 }
-
 ludo.innerHTML = table;
