@@ -1,11 +1,32 @@
-.image1{
-    height: 100px;
-    position: relative;
-    top: 400px;
-
+#button{
+    color: red;
+    background-color: greenyellow;
+    height: 40px;
+    width: 120px;
+    font-size: 20px;
+    font-weight: 600;
+    border: 3px dotted red;
 }
-.image2{
-    position: absolute;
-    height: 500px;
-    width: 700px;
+#text{
+    color: red;
+    font-size: 22px;
+    font-weight: 900;
+    
+}
+
+.dice {
+    margin-bottom: 20px;
+}
+#ludo{
+    display: flex;
+}
+.row{
+    border: 1px solid red;
+    height: 100px;
+    width: 100px;
+}
+.col{
+    border: 1px solid red;
+    height: 100px;
+    width: 100px;
 }
